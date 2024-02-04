@@ -13,6 +13,7 @@ docker-compose.yml
 package-lock.json
 package.json
 phpunit.xml
+pint.json
 postcss.config.js
 README.md
 tailwind.config.js
