@@ -1,6 +1,6 @@
 {
     "compilerOptions": {
-        "allowJs": true,
+        "allowJs": false,
         "module": "ESNext",
         "moduleResolution": "bundler",
         "jsx": "react-jsx",
@@ -9,6 +9,8 @@
         "target": "ESNext",
         "esModuleInterop": true,
         "forceConsistentCasingInFileNames": true,
+        "noImplicitReturns": true,
+        "noUncheckedIndexedAccess": true,
         "noEmit": true,
         "paths": {
             "@/*": ["./resources/js/*"],
