@@ -12,6 +12,7 @@ composer.lock
 docker-compose.yml
 package-lock.json
 package.json
+phpstan.neon
 phpunit.xml
 pint.json
 postcss.config.js
