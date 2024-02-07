@@ -6,7 +6,16 @@
         "build": "tsc && vite build",
         "lint": "eslint --ext .js,.jsx,.ts,.tsx resources/js",
         "lint:fix": "npm run lint -- --fix",
-        "format": "npm run lint:fix && prettier --write 'resources/js/**/*.{js,jsx,ts,tsx}'"
+        "format": "npm run lint:fix && prettier --write 'resources/js/**/*.{js,jsx,ts,tsx}'",
+        "prepare": "husky"
+    },
+    "lint-staged": {
+        "app/**/*.php": [
+            "vendor/bin/pint -v"
+        ],
+        "resources/js/**/*.{js,jsx,ts,tsx}": [
+            "npm run format"
+        ]
     },
     "devDependencies": {
         "@headlessui/react": "^1.4.2",
@@ -25,7 +34,9 @@
         "eslint-config-prettier": "^9.1.0",
         "eslint-plugin-react": "^7.33.2",
         "eslint-plugin-unused-imports": "^3.0.0",
+        "husky": "^9.0.10",
         "laravel-vite-plugin": "^1.0.0",
+        "lint-staged": "^15.2.2",
         "postcss": "^8.4.31",
         "prettier": "3.2.4",
         "prettier-plugin-tailwindcss": "^0.5.11",
